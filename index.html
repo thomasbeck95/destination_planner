@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- http://localhost:5500/lessons/2024-12-29_Crud/ -->
+    <title>Document</title>
+    <script src="crud.js" defer></script>
+</head>
+
+<body>
+    <!--<p class="responsive">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio cumque enim corrupti facilis iste numquam quaerat corporis adipisci aliquam perferendis, dolore eaque fuga accusantium ducimus id obcaecati aut sequi culpa similique. Commodi tempora laudantium earum optio nam veritatis omnis debitis dolorum libero, temporibus eaque in odit aspernatur quisquam amet maiores nostrum possimus? Est asperiores quibusdam porro ullam facere inventore doloremque, quam eaque in consequatur quae exercitationem, laudantium suscipit nostrum maxime quod expedita a non amet, libero cum quo voluptates! Itaque, qui nemo aliquam fugit voluptatem nam quod quisquam doloremque, in provident, facere odit ullam officia sit quae similique architecto inventore!</p>
+    -->
+    <!-- To do: form, destination, start date, end date, category-->
+    <!--
+        .field label {}
+     -->
+    <form id="tripForm">
+        <div class="field">
+            <label>
+                Destination
+                <input name="destination" type="text" placeholder="Destination:" required>
+            </label>
+        </div>
+        <div class="field">
+            <label>
+                Start date
+                <input name="start" type="date" required>
+            </label>
+        </div>
+        <div class="field">
+            <label>
+                End date
+                <input name="end" type="date" required>
+            </label>
+        </div>
+
+        <div class="field">
+            <label>
+                Category
+                <select name="category" required>
+                    <option value="">Select a category</option>
+                    <option value="holiday">holiday</option>
+                    <option value="business">business</option>
+                    <option value="other">other</option>
+                </select>
+            </label>
+        </div>
+
+
+        <div class="tripButton">
+            <button>
+                Add trip
+            </button>
+        </div>
+    </form>
+
+    <div class="modal-backdrop hidden">
+        <div class="modal">
+            <h3>Edit your drip</h3>
+            <form id="editForm">
+                <div class="field">
+                    Destination: <input type="text" name="destination">
+                </div>
+                <div class="field">
+                    Start date: <input type="date" name="start">
+                </div>
+                <div class="field">
+                    End date: <input type="date" name="end">
+                </div>
+                <div class="field">
+                    Category: <select name="category">
+                        <option value="holiday">holiday</option>
+                        <option value="business">business</option>
+                        <option value="other">other</option>
+                    </select>
+                </div>
+            </form>
+            <button id="cancelButton">Cancel</button>
+
+        </div>
+    </div>
+
+    <div id="trips">
+        <!--
+            <div class="trip">
+
+            </div>
+         -->
+    </div>
+</body>
+
+</html>

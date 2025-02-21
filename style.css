@@ -1,0 +1,138 @@
+@import "./card.css";
+
+@font-face {
+    src: url("./fonts/MyFont.ttf");
+    font-family: "MyFont";
+}
+
+body, button, input, textarea, select, option {
+    font-family: "MyFont";
+}
+
+
+button {
+    padding: 4px 10px;
+    border-radius: 100px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+input {
+    padding: .5rem;
+    border-radius: 100px;
+}
+
+ .modal-backdrop {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+}
+
+.modal {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.hidden {
+    display: none;
+}
+
+/*
+    border-width: 3px;
+    border-style: solid;
+    border-color: gray;
+*/
+
+#tripForm {
+    width: 400px;
+    border: 3px solid grey;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.field label {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+/*
+        margin: all4;
+        margin: t/b l/r;
+        margin: t r b l;
+*/
+
+.tripButton{
+    /* margin-top: 15px;
+    margin-bottom: 15px; */
+    /* margin: 15px 0px 15px 0px; */
+}
+
+.responsive {
+    width: 800px;
+    max-width: 98%;
+    margin: auto;
+}
+
+#trips {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr;
+}
+
+
+.card {
+    background-color: tan;
+    /* display:grid; */
+    /* grid-template-columns: 1fr 2fr; */
+    padding: 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+.card h4 {
+    /* width: 800px; */
+    /* max-width: 98%; */
+    /* margin: auto; */
+    background-color: red;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.delBut{
+    margin-right: 20px;
+}
+
+#editBut{
+    margin-right: 20px;
+}
+
+
+@media (min-width: 700px) {
+    #trips {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    #trips {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
